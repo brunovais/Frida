@@ -1,6 +1,7 @@
 /**
  07/2024
  this script shows all methods call chain in trace of one method
+ by @brunovais
  */
 
 var className = 'com.target.Class';
