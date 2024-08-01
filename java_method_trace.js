@@ -5,4 +5,5 @@
 function methodTrace(){
     var stackTrace = Java.use("android.util.Log").getStackTraceString(Java.use("java.lang.Exception").$new())
     stackTrace = stackTrace.replace("java.lang.Exception\n", "Method trace: \n")
+    console.log(stackTrace)
   }
