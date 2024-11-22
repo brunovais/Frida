@@ -1,4 +1,8 @@
-// redirect_socket.js
+/**
+ 11/2024
+ This script redirects all flutter traffic to a proxy of your choice @android
+ by @brunovais
+ */
 
 Interceptor.attach(Module.findExportByName(null, 'connect'), {
     onEnter: function(args) {
@@ -21,7 +25,7 @@ Interceptor.attach(Module.findExportByName(null, 'connect'), {
 
             console.log('Conectando para ' + ipStr + ':' + port);
 
-            var proxyIp = '192.168.15.3';
+            var proxyIp = '<IP>';
             var proxyPort = 8080;
 
             Memory.writeU16(addrPtr.add(2), ((proxyPort >> 8) & 0xFF) | ((proxyPort & 0xFF) << 8));
